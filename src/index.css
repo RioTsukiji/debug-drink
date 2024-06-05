@@ -1,6 +1,8 @@
 *{
   margin:0;
+
 }
+
 
 body {
   margin: 0;
@@ -50,3 +52,12 @@ h1,h2,h3,h4,h5,h6{
   width: 63px;
   height: 60px;
 }
+
+
+
+/* .noto-sans-jp-<uniquifier> {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */

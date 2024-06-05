@@ -9,7 +9,7 @@ const QuestionTopTitle = () => {
                 paddingBottom: '15px',
                 paddingTop: '90px',
                 overflow: 'hidden',
-
+                backgroundColor: '#33A474'
 
             }}
             >
@@ -22,7 +22,7 @@ const QuestionTopTitle = () => {
                     sx={{
                         color: 'white',
                         textAlign: 'center',
-
+                        backgroundColor: '#33A474',
                         marginBottom: '10px',
                         fontWeight: 'bold',
 
@@ -30,6 +30,7 @@ const QuestionTopTitle = () => {
                 <p
                     style={{
                         color: 'white',
+                        backgroundColor: '#33A474',
                         textAlign: 'center',
 
                     }}

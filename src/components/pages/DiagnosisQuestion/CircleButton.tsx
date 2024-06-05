@@ -32,8 +32,8 @@ export const CircleButton: React.FC<CircleButtonProps> = ({
     margin: "0 8px",
     borderWidth: 2,
     borderStyle: "solid",
-    borderColor: size < 4 ? "#ff7fbf" : size === 4 ? "#d4d9df" : "#ffbf7f",
-    backgroundColor: "white",
+    borderColor: size < 4 ? "#33A474" : size === 4 ? "#9A9EA5" : "#88619A",
+    backgroundColor: "#f9f9f9",
     "&.selected": {
       backgroundColor: "#4CAF50",
       color: "white",

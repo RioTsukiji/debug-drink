@@ -1,6 +1,6 @@
-import fruits1 from '../../../icons/fruits.svg';
-import fruits2 from '../../../icons/orange.svg';
-import fruits3 from '../../../icons/lemon.svg';
+import fruits1 from '../../../icons/materials/f_f_health_36_svg_f_health_36_2nbg.svg';
+import fruits2 from '../../../icons/materials/f_f_health_36_svg_f_health_36_1nbg.svg';
+import fruits3 from '../../../icons/materials/f_f_health_36_svg_f_health_36_2nbg.svg';
 
 const TipCard = ({ icon, text }: { icon: string, text: string }) => {
     return (
@@ -14,11 +14,15 @@ const TipCard = ({ icon, text }: { icon: string, text: string }) => {
                 justifyContent: 'flex-start',
                 flexDirection: 'row',
                 marginBottom: '10px',
+                filter: 'hue-rotate(0deg) contrast(150%)'
+
             }}>
                 <img src={icon} style={{
-                    width: '28px',
-                    height: '28px',
-                    paddingRight: '12px'
+                    width: '30px',
+                    height: '30px',
+                    paddingRight: '4px',
+                    paddingLeft: '4px'
+
                 }} />
                 <p>{text}</p>
 
@@ -36,7 +40,8 @@ const QuestionTopTipIndex = () => {
     return (
         <>
             <div className="tips" style={{
-                paddingTop: '15px'
+                paddingTop: '15px',
+                backgroundColor: '#33A474',
             }}>
                 {tips.map((tips) => (
                     <TipCard icon={tips.icon} text={tips.text} />
