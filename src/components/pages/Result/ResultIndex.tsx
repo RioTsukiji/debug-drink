@@ -18,7 +18,6 @@ const cardStyles: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
-
 }
 
 const DetailButtonStyles: React.CSSProperties = {
@@ -57,11 +56,11 @@ export const ResultIndex = () => {
     <>
       <Grid style={{ display: 'grid', placeItems: 'center', height: '100vh', width: '100vw', padding: '20px 15px', backgroundColor: '#dddfe2' }}>
 
-        <Grid style={cardStyles}>
+        <Grid style={{ ...cardStyles, borderTop: 'solid 3px', color: resultData[0].color }}>
           <div className="card-inner" style={{ textAlign: 'center' }}>
             <p style={{ marginBottom: '8px', padding: '0' }}>あなたの身体のバグ：</p>
             <h1 style={{ marginBottom: '5px' }}>{resultData[0].bugName}</h1>
-            <h4 style={{ marginBottom: '20px' }}>{resultData[0].alphabet}-SAN</h4>
+            <h4 style={{ marginBottom: '20px', color: resultData[0].color, }}>{resultData[0].alphabet}-SAN</h4>
             <img src={resultData[0].img} style={{ width: '160px', height: '160px', marginBottom: '20px' }} />
             <p>あなたは{resultData[0].message}</p>
           </div>

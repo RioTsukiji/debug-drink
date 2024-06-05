@@ -12,7 +12,7 @@ type Props = {
 const AppTemplate: React.FC<Props> = ({ children }) => {
   return (
     <>
-      <AppBar position="fixed" sx={{ backgroundColor: "#f9f9f9", boxShadow: "none", height: "60px", paddingTop: '4px', boxshadow: "0 0 10px rgba(29, 36, 50, .1)" }}>
+      <AppBar position="fixed" sx={{ backgroundColor: "#f9f9f9", boxShadow: "none", height: "60px", boxshadow: "0 0 10px rgba(29, 36, 50, .1)" }}>
         <Toolbar>
           <img src={LOGO} style={{
             width: '30px',
