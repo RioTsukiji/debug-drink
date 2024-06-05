@@ -33,8 +33,8 @@ const TipCard = ({ icon, text }: { icon: string, text: string }) => {
 const QuestionTopTipIndex = () => {
     const tips = [
         { icon: fruits1, text: 'あなたの主観的な身体の具合に応じて、おすすめのドリンクを提案します。' },
-        { icon: fruits2, text: 'この診断はジョーク企画ですので、科学的な根拠は一切ございません。' },
-        { icon: fruits3, text: '診断で出たドリンクを必ず注文する必要はありません！' },
+        { icon: fruits2, text: 'この診断はジョーク企画ですので、科学的な根拠は一切ございません。ご了承ください。' },
+        { icon: fruits3, text: '診断で出たドリンクを必ず注文する必要はありません！気楽に答えましょう。' },
     ];
 
     return (

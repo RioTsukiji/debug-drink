@@ -2,7 +2,8 @@ import { Grid } from "@mui/material";
 import React, { useState } from "react";
 import { Question } from "./Question";
 import { ResultButton } from "./ResultButton";
-import QuestionTop from "./QuestionTop";
+import QuestionTop from "./DiagnosisQuestionTop";
+import { Footer } from "../../templates/Footer";
 
 const DiagnosisQuestionIndex = () => {
   const questions = [
@@ -49,6 +50,7 @@ const DiagnosisQuestionIndex = () => {
           <ResultButton responses={responses} />
         </div>
       </Grid>
+      <Footer />
     </>
   );
 };

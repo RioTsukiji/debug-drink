@@ -4,6 +4,7 @@ import "./App.css";
 import AppTemplate from "./components/templates/AppTemplate";
 import DiagnosisQuestionIndex from "./components/pages/DiagnosisQuestion/DiagnosisQuestionIndex";
 import { ResultIndex } from "./components/pages/Result/ResultIndex";
+import ResultDetail from "./components/pages/Result/ResultDetail";
 
 function App() {
   return (
@@ -12,7 +13,9 @@ function App() {
         <AppTemplate>
           <Routes>
             <Route path="/" Component={DiagnosisQuestionIndex} />
-            <Route path="/result" Component={ResultIndex} />c
+            <Route path="/result" Component={ResultIndex} />
+            <Route path="/detail" Component={ResultDetail} />
+            {/* これ正しくないのでどっかでなおす */}
           </Routes>
         </AppTemplate>
       </BrowserRouter>

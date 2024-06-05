@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import QuestionTopTipIndex from "./QuestionTopTip";
+import QuestionTopTipIndex from "./DiagnosisQuestionTopTip";
 import eventLogo from '../../../icons/debugdrinkIcon.jpg'
 
 const QuestionTopTitle = () => {
@@ -10,7 +10,6 @@ const QuestionTopTitle = () => {
                 paddingTop: '90px',
                 overflow: 'hidden',
                 backgroundColor: '#33A474'
-
             }}
             >
                 {/* <div style={{ display: 'grid', placeItems: 'center', marginBottom: '24px' }}>
@@ -25,14 +24,12 @@ const QuestionTopTitle = () => {
                         backgroundColor: '#33A474',
                         marginBottom: '10px',
                         fontWeight: 'bold',
-
                     }}>健康診断テスト</Typography>
                 <p
                     style={{
                         color: 'white',
                         backgroundColor: '#33A474',
                         textAlign: 'center',
-
                     }}
                 >Presented by Bashi.com</p></div>
 
