@@ -13,23 +13,23 @@ export const CircleButton: React.FC<CircleButtonProps> = ({
 }) => {
   const sizeClass =
     size === 1
-      ? { width: 30, height: 30 }
+      ? { width: 45, height: 45 }
       : size === 2
-        ? { width: 25, height: 25 }
+        ? { width: 35, height: 35 }
         : size === 3
-          ? { width: 20, height: 20 }
+          ? { width: 28, height: 28 }
           : size === 4
             ? { width: 15, height: 15 }
             : size === 5
-              ? { width: 20, height: 20 }
+              ? { width: 25, height: 25 }
               : size === 6
-                ? { width: 25, height: 25 }
-                : { width: 30, height: 30 };
+                ? { width: 35, height: 35 }
+                : { width: 45, height: 45 };
 
   const selectedClass = selected ? "selected" : "";
   const circleClass = {
     borderRadius: "50%",
-    margin: "0 8px",
+    boxShadow: 'inset 0 1px rgba(81, 89, 106, 0.05)',
     borderWidth: 2,
     borderStyle: "solid",
     borderColor: size < 4 ? "#33A474" : size === 4 ? "#9A9EA5" : "#88619A",
