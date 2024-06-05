@@ -26,10 +26,10 @@ export const CircleButton: React.FC<CircleButtonProps> = ({
                 ? { width: 35, height: 35 }
                 : { width: 45, height: 45 };
 
-  const selectedClass = selected ? "selected" : "";
+  //const selectedClass = selected ? "selected" : "";
   const circleClass = {
     borderRadius: "50%",
-    boxShadow: 'inset 0 1px rgba(81, 89, 106, 0.05)',
+    boxShadow: "inset 0 1px rgba(81, 89, 106, 0.05)",
     borderWidth: 2,
     borderStyle: "solid",
     borderColor: size < 4 ? "#33A474" : size === 4 ? "#9A9EA5" : "#88619A",
