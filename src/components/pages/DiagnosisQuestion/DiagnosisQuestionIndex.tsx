@@ -2,14 +2,16 @@ import { Grid } from "@mui/material";
 import React, { useState } from "react";
 import { Question } from "./Question";
 import { ResultButton } from "./ResultButton";
+import QuestionTop from "./DiagnosisQuestionTop";
+import { Footer } from "../../templates/Footer";
 
 const DiagnosisQuestionIndex = () => {
   const questions = [
-    "Q1：疲れが溜まっている",
-    "Q2：最近よく眠れない",
-    "Q3：ストレスを感じることが多い",
-    "Q4：お酒をよく飲む",
-    "Q5：すっきりしたい",
+    "疲れが溜まっている。",
+    "最近よく眠れない。",
+    "ストレスを感じることが多い。",
+    "お酒をよく飲む。",
+    "すっきりしたい。",
   ];
 
   // responsesの型定義
@@ -25,7 +27,8 @@ const DiagnosisQuestionIndex = () => {
   };
   return (
     <>
-      <Grid style={{ marginTop: 100, paddingLeft: "10%", paddingRight: "10%" }}>
+      <QuestionTop />
+      <Grid style={{ padding: '0 15px', backgroundColor: '#f9f9f9' }}>
         {questions.map((question, index) => (
           <Question
             key={index}
@@ -34,8 +37,20 @@ const DiagnosisQuestionIndex = () => {
             selectedValue={responses[index]}
           />
         ))}
-        <ResultButton responses={responses} />
+        <div style={{
+          display: 'grid',
+          justifyContent: 'center',
+          padding: '45px 0 90px',
+          margin: ' auto',
+          width: '100%',
+          maxWidth: '700px',
+
+          borderBottom: '1px solid #DDDFE2',
+        }}>
+          <ResultButton responses={responses} />
+        </div>
       </Grid>
+      <Footer />
     </>
   );
 };
