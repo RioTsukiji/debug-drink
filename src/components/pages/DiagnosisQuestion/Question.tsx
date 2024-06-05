@@ -19,7 +19,8 @@ export const Question: React.FC<QuestionProps> = ({
   return (
     <Grid style={{ marginBottom: 40 }}>
       <Typography
-        style={{ textAlign: "start", marginBottom: 20, marginTop: 10 }}
+
+        style={{ textAlign: "center", marginBottom: 20, marginTop: 10, fontWeight: 'bold', fontSize: '1.125rem' }}
       >
         {questionText}
       </Typography>
