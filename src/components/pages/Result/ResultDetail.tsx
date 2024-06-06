@@ -77,33 +77,37 @@ const ResultDetail = () => {
     <>
       <div
         style={{
-          backgroundColor: resultData[0].color,
+          backgroundColor: resultData[4].color,
           padding: "80px 20px 20px 20px",
         }}
       >
-        <h1 style={{ color: "white" }}>{resultData[0].bugName}</h1>
+        <h1 style={{ color: "white" }}>{resultData[4].bugName}</h1>
         <h2 style={{ color: "rgba(0,0,0,0.6)", marginBottom: "30px" }}>
-          {resultData[0].alphabet}-SAN型のドリンク
+          {resultData[4].alphabet}型のドリンク
         </h2>
         <div style={{ display: "grid", placeContent: "center" }}>
           <img
-            src={resultData[0].img}
+            src={resultData[4].img}
             style={{ marginBottom: "20px", width: "200px" }}
-            alt={resultData[0].bugName}
           />
         </div>
-        <h1 style={{ color: "white" }}>{resultData[0].drink}</h1>
+        <h1 style={{ color: "white", marginBottom: "5px" }}>
+          {resultData[4].drink}
+        </h1>
+        <p style={{ color: "white", fontSize: "18px", fontWeight: "bold" }}>
+          {resultData[4].drinkMessage}
+        </p>
       </div>
       <div
         style={{ backgroundColor: "#f9f9f9", padding: "20px 20px 100px 20px" }}
       >
         <div style={{ marginBottom: "40px" }}>
           <h2 style={{ marginBottom: "10px" }}>材料</h2>
-          <p style={{ fontSize: "18px" }}>{resultData[0].drinkExplain1}</p>
+          <p style={{ fontSize: "18px" }}>{resultData[4].drinkExplain1}</p>
         </div>
         <div style={{ marginBottom: "40px" }}>
           <h2 style={{ marginBottom: "10px" }}>期待される効果</h2>
-          <p style={{ fontSize: "18px" }}>{resultData[0].drinkExplain2}</p>
+          <p style={{ fontSize: "18px" }}>{resultData[4].drinkExplain2}</p>
         </div>
         <Menu />
       </div>

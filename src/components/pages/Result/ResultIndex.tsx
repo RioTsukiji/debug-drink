@@ -1,7 +1,5 @@
 import React from "react";
 import { Grid } from "@mui/material";
-// import fruitsPattern from "../../../icons/decolate/pattern_fruits_gray.jpg";
-// import { resultDataType } from "./ResultData";
 import { resultData } from "./ResultData";
 import { useNavigate } from "react-router-dom";
 
@@ -39,7 +37,7 @@ const DetailButton = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/detail");
+    navigate("/result_detail");
   };
   return (
     <button style={DetailButtonStyles} onClick={handleClick}>
@@ -77,14 +75,13 @@ export const ResultIndex = () => {
             </p>
             <h1 style={{ marginBottom: "5px" }}>{resultData[0].bugName}</h1>
             <h4 style={{ marginBottom: "20px", color: resultData[0].color }}>
-              {resultData[0].alphabet}-SAN
+              {resultData[0].alphabet}
             </h4>
             <img
               src={resultData[0].img}
               style={{ width: "160px", height: "160px", marginBottom: "20px" }}
-              alt="result-img"
             />
-            <p>あなたは{resultData[0].message}</p>
+            <p>{resultData[0].message}</p>
           </div>
           <div
             style={{

@@ -1,6 +1,6 @@
 import React from "react";
 import { AppBar, Grid, Toolbar, Typography } from "@mui/material";
-import LOGO from "../../icons/debugdrinkIcon.jpg";
+import LOGO from "../../icons/logo_nisemono.png";
 import orange from "../../icons/materials/f_f_health_53_svg_f_health_53_1nbg.svg";
 
 //const drawerWidth = 210;
@@ -27,7 +27,6 @@ const AppTemplate: React.FC<Props> = ({ children }) => {
             style={{
               width: "30px",
               height: "30px",
-              filter: "grayscale(100%)",
             }}
             alt={"LOGO"}
           />
@@ -43,10 +42,10 @@ const AppTemplate: React.FC<Props> = ({ children }) => {
               color: "#3C3C3C",
             }}
           >
-            Debug drink
+            <span style={{ color: "#cc3e60" }}>De</span>bug drink
           </Typography>
           <span className="false-menu-square">
-            <img src={orange} style={{}} alt={"orange"} />
+            <img src={orange} style={{}} />
           </span>
         </Toolbar>
       </AppBar>
