@@ -14,8 +14,7 @@ function App() {
           <Routes>
             <Route path="/" Component={DiagnosisQuestionIndex} />
             <Route path="/result" Component={ResultIndex} />
-            <Route path="/detail" Component={ResultDetail} />
-            {/* これ正しくないのでどっかでなおす */}
+            <Route path="/result_detail" Component={ResultDetail} />
           </Routes>
         </AppTemplate>
       </BrowserRouter>

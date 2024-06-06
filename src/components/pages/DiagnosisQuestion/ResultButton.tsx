@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 type Props = {
   responses: (number | null)[];
+  result: "stress" | "depression" | "tired" | "playful";
 };
 
 const resultButtonStyles: React.CSSProperties = {
@@ -21,11 +22,11 @@ const resultButtonStyles: React.CSSProperties = {
   boxSizing: "border-box",
 };
 
-export const ResultButton: React.FC<Props> = ({ responses }) => {
+export const ResultButton: React.FC<Props> = ({ responses, result }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/result", { state: { responses } });
+    navigate("/result", { state: { responses, result: result } });
   };
 
   return (

@@ -3,18 +3,23 @@ import { Grid, Typography } from "@mui/material";
 import { CircleButton } from "./CircleButton";
 
 interface QuestionProps {
-  questionText: string;
+  question: Question;
   onSelect: (selectedIndex: number) => void;
   selectedValue: number | null;
 }
 
+type Question = {
+  type: string;
+  question: string;
+};
+
 // Questionコンポーネント
 export const Question: React.FC<QuestionProps> = ({
-  questionText,
+  question,
   onSelect,
   selectedValue,
 }) => {
-  const sizes = [1, 2, 3, 4, 5, 6, 7];
+  const sizes = [7, 6, 5, 4, 3, 2, 1];
 
   return (
     <Grid
@@ -33,7 +38,7 @@ export const Question: React.FC<QuestionProps> = ({
           fontSize: "1.125rem",
         }}
       >
-        {questionText}
+        {question.question}
       </Typography>
       <Grid
         style={{
@@ -46,8 +51,8 @@ export const Question: React.FC<QuestionProps> = ({
           <CircleButton
             key={index}
             size={size}
-            selected={selectedValue === index}
-            onClick={() => onSelect(index)}
+            selected={selectedValue === size}
+            onClick={() => onSelect(size)}
           />
         ))}
       </Grid>

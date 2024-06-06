@@ -3,7 +3,7 @@ import { Grid } from "@mui/material";
 // import fruitsPattern from "../../../icons/decolate/pattern_fruits_gray.jpg";
 // import { resultDataType } from "./ResultData";
 import { resultData } from "./ResultData";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const cardStyles: React.CSSProperties = {
   width: "360px",
@@ -35,11 +35,15 @@ const DetailButtonStyles: React.CSSProperties = {
   display: "block",
 };
 
-const DetailButton = () => {
+type DetailButtonProps = {
+  result: "stress" | "depression" | "tired" | "playful";
+};
+
+const DetailButton: React.FC<DetailButtonProps> = ({ result }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/detail");
+    navigate("/result_detail", { state: { result: result } });
   };
   return (
     <button style={DetailButtonStyles} onClick={handleClick}>
@@ -49,8 +53,12 @@ const DetailButton = () => {
 };
 
 export const ResultIndex = () => {
-  //const location = useLocation();
-  //const { responses } = location.state as { responses: (number | null)[] };
+  const location = useLocation();
+  const { responses, result } = location.state as {
+    responses: (number | null)[];
+    result: "stress" | "depression" | "tired" | "playful";
+  };
+  const resultInfo = resultData[result];
 
   return (
     <>
@@ -68,23 +76,23 @@ export const ResultIndex = () => {
           style={{
             ...cardStyles,
             borderTop: "solid 3px",
-            color: resultData[0].color,
+            color: resultInfo.color,
           }}
         >
           <div className="card-inner" style={{ textAlign: "center" }}>
             <p style={{ marginBottom: "8px", padding: "0" }}>
               あなたの身体のバグ：
             </p>
-            <h1 style={{ marginBottom: "5px" }}>{resultData[0].bugName}</h1>
-            <h4 style={{ marginBottom: "20px", color: resultData[0].color }}>
-              {resultData[0].alphabet}-SAN
+            <h1 style={{ marginBottom: "5px" }}>{resultInfo.bugName}</h1>
+            <h4 style={{ marginBottom: "20px", color: resultInfo.color }}>
+              {resultInfo.alphabet}
             </h4>
             <img
-              src={resultData[0].img}
+              src={resultInfo.img}
               style={{ width: "160px", height: "160px", marginBottom: "20px" }}
               alt="result-img"
             />
-            <p>あなたは{resultData[0].message}</p>
+            <p>{resultInfo.message}</p>
           </div>
           <div
             style={{
@@ -93,7 +101,7 @@ export const ResultIndex = () => {
               width: "100%",
             }}
           >
-            <DetailButton />
+            <DetailButton result={result} />
           </div>
         </Grid>
       </Grid>

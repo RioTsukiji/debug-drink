@@ -7,17 +7,75 @@ import { Footer } from "../../templates/Footer";
 
 const DiagnosisQuestionIndex = () => {
   const questions = [
-    "疲れが溜まっている。",
-    "最近よく眠れない。",
-    "ストレスを感じることが多い。",
-    "お酒をよく飲む。",
-    "すっきりしたい。",
+    {
+      type: "tired",
+      question: "アルバイト（仕事）は肉体労働だ。",
+    },
+    {
+      type: "tired",
+      question: "ベッドではない場所でよく寝落ちしてしまう。",
+    },
+    {
+      type: "stress",
+      question: "朝起きるのが辛い。",
+    },
+    {
+      type: "stress",
+      question: "仕事が終わるとすぐに寝てしまう。",
+    },
+    {
+      type: "depression",
+      question: "今週はあまりいいことがなかった。",
+    },
+    {
+      type: "depression",
+      question: "休日、やりたいことがない。",
+    },
+    {
+      type: "playful",
+      question: "ついつい夜更かししてしまう。",
+    },
+    {
+      type: "playful",
+      question: "週に1度以上お酒を飲む。",
+    },
   ];
 
   // responsesの型定義
   const [responses, setResponses] = useState<(number | null)[]>(
     Array(questions.length).fill(null),
   );
+
+  const calculateScoresByType = () => {
+    const scores: { [key: string]: number } = {};
+
+    questions.forEach((question, index) => {
+      const response = responses[index];
+      if (response !== null) {
+        if (!scores[question.type]) {
+          scores[question.type] = 0;
+        }
+        scores[question.type] += response;
+      }
+    });
+
+    return scores;
+  };
+
+  const findHighestScoringType = () => {
+    const scores = calculateScoresByType();
+    let highestType = "";
+    let highestScore = -Infinity;
+
+    Object.entries(scores).forEach(([type, score]) => {
+      if (score > highestScore) {
+        highestScore = score;
+        highestType = type;
+      }
+    });
+
+    return highestType as "stress" | "depression" | "tired" | "playful";
+  };
 
   // 選択肢が変更されたときの処理
   const handleSelect = (questionIndex: number, selectedIndex: number) => {
@@ -32,7 +90,7 @@ const DiagnosisQuestionIndex = () => {
         {questions.map((question, index) => (
           <Question
             key={index}
-            questionText={question}
+            question={question}
             onSelect={(selectedIndex) => handleSelect(index, selectedIndex)}
             selectedValue={responses[index]}
           />
@@ -49,7 +107,10 @@ const DiagnosisQuestionIndex = () => {
             borderBottom: "1px solid #DDDFE2",
           }}
         >
-          <ResultButton responses={responses} />
+          <ResultButton
+            responses={responses}
+            result={findHighestScoringType()}
+          />
         </div>
       </Grid>
       <Footer />

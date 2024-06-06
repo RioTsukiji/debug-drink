@@ -1,4 +1,5 @@
 import React from "react";
+import CheckIcon from "@mui/icons-material/Check";
 
 interface CircleButtonProps {
   size: number;
@@ -32,7 +33,7 @@ export const CircleButton: React.FC<CircleButtonProps> = ({
     boxShadow: "inset 0 1px rgba(81, 89, 106, 0.05)",
     borderWidth: 2,
     borderStyle: "solid",
-    borderColor: size < 4 ? "#33A474" : size === 4 ? "#9A9EA5" : "#88619A",
+    borderColor: size < 4 ? "#88619A" : size === 4 ? "#9A9EA5" : "#33A474",
     backgroundColor: "#f9f9f9",
     "&.selected": {
       backgroundColor: "#4CAF50",
@@ -40,5 +41,9 @@ export const CircleButton: React.FC<CircleButtonProps> = ({
     },
   };
 
-  return <div style={{ ...circleClass, ...sizeClass }} onClick={onClick}></div>;
+  return (
+    <div style={{ ...circleClass, ...sizeClass }} onClick={onClick}>
+      {selected && <CheckIcon style={{ color: "black" }} />}
+    </div>
+  );
 };
