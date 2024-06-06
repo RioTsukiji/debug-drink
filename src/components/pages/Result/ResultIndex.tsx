@@ -40,7 +40,7 @@ const DetailButton = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/detail");
+    navigate("/result_detail");
   };
   return (
     <button style={DetailButtonStyles} onClick={handleClick}>続ける</button>
@@ -60,9 +60,9 @@ export const ResultIndex = () => {
           <div className="card-inner" style={{ textAlign: 'center' }}>
             <p style={{ marginBottom: '8px', padding: '0' }}>あなたの身体のバグ：</p>
             <h1 style={{ marginBottom: '5px' }}>{resultData[0].bugName}</h1>
-            <h4 style={{ marginBottom: '20px', color: resultData[0].color, }}>{resultData[0].alphabet}-SAN</h4>
+            <h4 style={{ marginBottom: '20px', color: resultData[0].color, }}>{resultData[0].alphabet}</h4>
             <img src={resultData[0].img} style={{ width: '160px', height: '160px', marginBottom: '20px' }} />
-            <p>あなたは{resultData[0].message}</p>
+            <p>{resultData[0].message}</p>
           </div>
           <div style={{
             display: 'flex', placeContent: 'center', width: '100%',

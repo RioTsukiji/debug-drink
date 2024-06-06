@@ -34,11 +34,12 @@ const ResultDetail = () => {
     return (<>
         <div style={{ backgroundColor: resultData[0].color, padding: '80px 20px 20px 20px' }}>
             <h1 style={{ color: 'white' }}>{resultData[0].bugName}</h1>
-            <h2 style={{ color: 'rgba(0,0,0,0.6)', marginBottom: '30px' }}>{resultData[0].alphabet}-SAN型のドリンク</h2>
+            <h2 style={{ color: 'rgba(0,0,0,0.6)', marginBottom: '30px' }}>{resultData[0].alphabet}型のドリンク</h2>
             <div style={{ display: 'grid', placeContent: 'center' }}>
                 <img src={resultData[0].img} style={{ marginBottom: '20px', width: '200px' }} />
             </div>
-            <h1 style={{ color: 'white' }}>{resultData[0].drink}</h1>
+            <h1 style={{ color: 'white', marginBottom: '5px' }}>{resultData[0].drink}</h1>
+            <p style={{ color: 'white', fontSize: '18px', fontWeight: 'bold' }}>{resultData[0].drinkMessage}</p>
         </div >
         <div style={{ backgroundColor: '#f9f9f9', padding: '20px 20px 100px 20px' }}>
             <div style={{ marginBottom: '40px' }}>
