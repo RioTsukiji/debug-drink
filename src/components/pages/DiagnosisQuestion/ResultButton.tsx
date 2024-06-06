@@ -1,9 +1,9 @@
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import React from "react";
 
 type Props = {
-  responses: (number | null)[];
-  result: "stress" | "depression" | "tired" | "playful";
+  result: "stress" | "depression" | "tired" | "playful" | "healthy" | "";
 };
 
 const resultButtonStyles: React.CSSProperties = {
@@ -12,7 +12,6 @@ const resultButtonStyles: React.CSSProperties = {
   minWidth: "260px",
   color: "#fff",
   backgroundColor: "#6c4d7b",
-
   fontFamily: "Noto Sans JP",
   fontWeight: "bold",
   borderRadius: "40px",
@@ -22,15 +21,31 @@ const resultButtonStyles: React.CSSProperties = {
   boxSizing: "border-box",
 };
 
-export const ResultButton: React.FC<Props> = ({ responses, result }) => {
+const grayscaleStyles: React.CSSProperties = {
+  backgroundColor: "#DDDFE2",
+  cursor: "not-allowed",
+};
+
+export const ResultButton: React.FC<Props> = ({ result }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/result", { state: { responses, result: result } });
+    if (result !== "") {
+      navigate("/result", { state: { result: result } });
+    }
   };
 
+  const isDisabled = result === "";
+
   return (
-    <Button onClick={handleClick} style={resultButtonStyles}>
+    <Button
+      onClick={handleClick}
+      style={{
+        ...resultButtonStyles,
+        ...(result === "" ? grayscaleStyles : {}),
+      }}
+      disabled={isDisabled}
+    >
       結果 →
     </Button>
   );

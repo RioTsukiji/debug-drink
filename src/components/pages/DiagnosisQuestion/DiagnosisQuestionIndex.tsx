@@ -8,20 +8,20 @@ import { Footer } from "../../templates/Footer";
 const DiagnosisQuestionIndex = () => {
   const questions = [
     {
-      type: "tired",
-      question: "アルバイト（仕事）は肉体労働だ。",
-    },
-    {
-      type: "tired",
-      question: "ベッドではない場所でよく寝落ちしてしまう。",
-    },
-    {
       type: "stress",
       question: "朝起きるのが辛い。",
     },
     {
       type: "stress",
       question: "仕事が終わるとすぐに寝てしまう。",
+    },
+    {
+      type: "playful",
+      question: "ついつい夜更かししてしまう。",
+    },
+    {
+      type: "playful",
+      question: "週に1度以上お酒を飲む。",
     },
     {
       type: "depression",
@@ -32,16 +32,15 @@ const DiagnosisQuestionIndex = () => {
       question: "休日、やりたいことがない。",
     },
     {
-      type: "playful",
-      question: "ついつい夜更かししてしまう。",
+      type: "tired",
+      question: "アルバイト（仕事）は肉体労働だ。",
     },
     {
-      type: "playful",
-      question: "週に1度以上お酒を飲む。",
+      type: "tired",
+      question: "ベッドではない場所でよく寝落ちしてしまう。",
     },
   ];
 
-  // responsesの型定義
   const [responses, setResponses] = useState<(number | null)[]>(
     Array(questions.length).fill(null),
   );
@@ -68,13 +67,21 @@ const DiagnosisQuestionIndex = () => {
     let highestScore = -Infinity;
 
     Object.entries(scores).forEach(([type, score]) => {
-      if (score > highestScore) {
+      if (score < 7) {
+        highestType = "healthy";
+      } else if (score > highestScore) {
         highestScore = score;
         highestType = type;
       }
     });
 
-    return highestType as "stress" | "depression" | "tired" | "playful";
+    return highestType as
+      | "stress"
+      | "depression"
+      | "tired"
+      | "playful"
+      | "healthy"
+      | "";
   };
 
   // 選択肢が変更されたときの処理
@@ -107,10 +114,7 @@ const DiagnosisQuestionIndex = () => {
             borderBottom: "1px solid #DDDFE2",
           }}
         >
-          <ResultButton
-            responses={responses}
-            result={findHighestScoringType()}
-          />
+          <ResultButton result={findHighestScoringType()} />
         </div>
       </Grid>
       <Footer />

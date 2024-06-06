@@ -98,12 +98,12 @@ const ResultDetail = () => {
             alt={ResultInfo.bugName}
           />
         </div>
-          <h1 style={{ color: "white", marginBottom: "5px" }}>
-              {ResultInfo.drink}
-          </h1>
-          <p style={{ color: "white", fontSize: "18px", fontWeight: "bold" }}>
-              {ResultInfo.drinkMessage}
-          </p>
+        <h1 style={{ color: "white", marginBottom: "5px" }}>
+          {ResultInfo.drink}
+        </h1>
+        <p style={{ color: "white", fontSize: "18px", fontWeight: "bold" }}>
+          {ResultInfo.drinkMessage}
+        </p>
       </div>
       <div
         style={{ backgroundColor: "#f9f9f9", padding: "20px 20px 100px 20px" }}

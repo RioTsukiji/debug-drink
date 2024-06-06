@@ -43,7 +43,7 @@ const AppTemplate: React.FC<Props> = ({ children }) => {
               color: "#3C3C3C",
             }}
           >
-              <span style={{ color: "#cc3e60" }}>De</span>bug drink
+            <span style={{ color: "#cc3e60" }}>De</span>bug drink
           </Typography>
           <span className="false-menu-square">
             <img src={orange} style={{}} alt={"orange"} />

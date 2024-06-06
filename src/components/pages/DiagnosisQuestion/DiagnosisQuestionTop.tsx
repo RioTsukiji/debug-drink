@@ -1,7 +1,6 @@
 import { Typography } from "@mui/material";
 import QuestionTopTipIndex from "./DiagnosisQuestionTopTip";
 
-
 const QuestionTopTitle = () => {
   return (
     <>

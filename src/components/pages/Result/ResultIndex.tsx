@@ -54,8 +54,7 @@ const DetailButton: React.FC<DetailButtonProps> = ({ result }) => {
 
 export const ResultIndex = () => {
   const location = useLocation();
-  const { responses, result } = location.state as {
-    responses: (number | null)[];
+  const { result } = location.state as {
     result: "stress" | "depression" | "tired" | "playful";
   };
   const resultInfo = resultData[result];
