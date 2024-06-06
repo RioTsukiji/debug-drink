@@ -1,7 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { Grid } from "@mui/material";
-import fruitsPattern from "../../../icons/decolate/pattern_fruits_gray.jpg";
-import { resultDataType } from "./ResultData";
 import { resultData } from "./ResultData";
 import { useNavigate } from "react-router-dom";
 
@@ -49,6 +47,9 @@ const DetailButton = () => {
 };
 
 export const ResultIndex = () => {
+  //const location = useLocation();
+  //const { responses } = location.state as { responses: (number | null)[] };
+
   return (
     <>
       <Grid

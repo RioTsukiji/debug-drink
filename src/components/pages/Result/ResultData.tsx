@@ -8,7 +8,9 @@ export type resultDataType = {
   img: string;
   color: string;
   drink: string;
+
   drinkMessage: string;
+
   drinkExplain1: string;
   drinkExplain2: string;
 };
@@ -99,6 +101,7 @@ export const resultData: resultDataType[] = [
   {
     type: "healthy",
     bugName: "健康そのもの",
+
     alphabet: "PERFECT-BODY",
     message:
       "完璧で最強な身体をお持ちのようです。毎日楽しく、規則正しく、元気でストレスフリーで立派に生きています。素晴らしい！！！！",

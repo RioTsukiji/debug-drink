@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="220179c3-8874-45f4-8444-1a4d0d574012" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/DiagnosisQuestion/CircleButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/DiagnosisQuestion/CircleButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/DiagnosisQuestion/DiagnosisQuestionIndex.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/DiagnosisQuestion/DiagnosisQuestionIndex.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/DiagnosisQuestion/DiagnosisQuestionTop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/DiagnosisQuestion/DiagnosisQuestionTop.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/DiagnosisQuestion/DiagnosisQuestionTopTip.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/DiagnosisQuestion/DiagnosisQuestionTopTip.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/DiagnosisQuestion/Question.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/DiagnosisQuestion/Question.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/DiagnosisQuestion/ResultButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/DiagnosisQuestion/ResultButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Result/ResultData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Result/ResultData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Result/ResultDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Result/ResultDetail.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Result/ResultIndex.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Result/ResultIndex.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/templates/AppTemplate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/templates/AppTemplate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/templates/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/templates/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +49,17 @@
     "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/riotsukiji/Desktop/debug-drink/node_modules/prettier",
     "ts.external.directory.path": "/Users/riotsukiji/Desktop/debug-drink/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/pages/DiagnosisQuestion" />
       <recent name="$PROJECT_DIR$/src/components/templates" />
     </key>
   </component>
@@ -56,6 +73,8 @@
       <updated>1716629437653</updated>
       <workItem from="1716629439640" duration="3524000" />
       <workItem from="1716633597034" duration="3842000" />
+      <workItem from="1717425009329" duration="5703000" />
+      <workItem from="1717600798477" duration="2477000" />
     </task>
     <servers />
   </component>

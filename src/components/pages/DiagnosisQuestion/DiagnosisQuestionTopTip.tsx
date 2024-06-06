@@ -26,6 +26,9 @@ const TipCard = ({ icon, text }: { icon: string; text: string }) => {
             paddingRight: "4px",
             paddingLeft: "4px",
           }}
+
+          alt={"icon"}
+
         />
         <p>{text}</p>
       </div>

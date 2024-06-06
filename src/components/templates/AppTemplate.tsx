@@ -3,7 +3,7 @@ import { AppBar, Grid, Toolbar, Typography } from "@mui/material";
 import LOGO from "../../icons/logo_nisemono.png";
 import orange from "../../icons/materials/f_f_health_53_svg_f_health_53_1nbg.svg";
 
-const drawerWidth = 210;
+//const drawerWidth = 210;
 
 type Props = {
   children: React.ReactNode;
@@ -28,6 +28,7 @@ const AppTemplate: React.FC<Props> = ({ children }) => {
               width: "30px",
               height: "30px",
             }}
+            alt={"LOGO"}
           />
           <Typography
             variant="h5"

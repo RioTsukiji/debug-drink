@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import QuestionTopTipIndex from "./DiagnosisQuestionTopTip";
-import eventLogo from "../../../icons/debugdrinkIcon.jpg";
+
 
 const QuestionTopTitle = () => {
   return (
