@@ -28,7 +28,7 @@ const DiagnosisQuestionIndex = () => {
   return (
     <>
       <QuestionTop />
-      <Grid style={{ padding: '0 15px', backgroundColor: '#f9f9f9' }}>
+      <Grid style={{ padding: "0 15px", backgroundColor: "#f9f9f9" }}>
         {questions.map((question, index) => (
           <Question
             key={index}
@@ -37,16 +37,18 @@ const DiagnosisQuestionIndex = () => {
             selectedValue={responses[index]}
           />
         ))}
-        <div style={{
-          display: 'grid',
-          justifyContent: 'center',
-          padding: '45px 0 90px',
-          margin: ' auto',
-          width: '100%',
-          maxWidth: '700px',
+        <div
+          style={{
+            display: "grid",
+            justifyContent: "center",
+            padding: "45px 0 90px",
+            margin: " auto",
+            width: "100%",
+            maxWidth: "700px",
 
-          borderBottom: '1px solid #DDDFE2',
-        }}>
+            borderBottom: "1px solid #DDDFE2",
+          }}
+        >
           <ResultButton responses={responses} />
         </div>
       </Grid>
