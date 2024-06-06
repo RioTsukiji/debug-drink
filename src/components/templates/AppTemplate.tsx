@@ -1,6 +1,6 @@
 import React from "react";
 import { AppBar, Grid, Toolbar, Typography } from "@mui/material";
-import LOGO from "../../icons/debugdrinkIcon.jpg";
+import LOGO from "../../icons/logo_nisemono.png";
 import orange from '../../icons/materials/f_f_health_53_svg_f_health_53_1nbg.svg';
 
 const drawerWidth = 210;
@@ -17,7 +17,7 @@ const AppTemplate: React.FC<Props> = ({ children }) => {
           <img src={LOGO} style={{
             width: '30px',
             height: '30px',
-            filter: 'grayscale(100%)'
+
           }} />
           <Typography
             variant="h5"
@@ -32,7 +32,7 @@ const AppTemplate: React.FC<Props> = ({ children }) => {
 
             }}
           >
-            Debug drink
+            <span style={{ color: '#cc3e60' }}>De</span>bug drink
 
           </Typography>
           <span className="false-menu-square"><img src={orange} style={{}} /></span>
