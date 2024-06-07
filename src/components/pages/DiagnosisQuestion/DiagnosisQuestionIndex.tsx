@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
-import { Question } from "./Question";
+import { QuestionItems } from "./QuestionItems";
 import { ResultButton } from "./ResultButton";
 import QuestionTop from "./DiagnosisQuestionTop";
 import { Footer } from "../../templates/Footer";
@@ -95,7 +95,7 @@ const DiagnosisQuestionIndex = () => {
       <QuestionTop />
       <Grid style={{ padding: "0 15px", backgroundColor: "#f9f9f9" }}>
         {questions.map((question, index) => (
-          <Question
+          <QuestionItems
             key={index}
             question={question}
             onSelect={(selectedIndex) => handleSelect(index, selectedIndex)}

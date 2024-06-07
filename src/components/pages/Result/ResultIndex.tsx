@@ -1,7 +1,5 @@
 import React from "react";
 import { Grid } from "@mui/material";
-// import fruitsPattern from "../../../icons/decolate/pattern_fruits_gray.jpg";
-// import { resultDataType } from "./ResultData";
 import { resultData } from "./ResultData";
 import { useLocation, useNavigate } from "react-router-dom";
 

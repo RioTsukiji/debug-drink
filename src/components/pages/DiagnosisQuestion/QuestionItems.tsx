@@ -14,7 +14,7 @@ type Question = {
 };
 
 // Questionコンポーネント
-export const Question: React.FC<QuestionProps> = ({
+export const QuestionItems: React.FC<QuestionProps> = ({
   question,
   onSelect,
   selectedValue,
