@@ -66,14 +66,18 @@ const DiagnosisQuestionIndex = () => {
     let highestType = "";
     let highestScore = -Infinity;
 
-    Object.entries(scores).forEach(([type, score]) => {
-      if (score < 7) {
-        highestType = "healthy";
-      } else if (score > highestScore) {
-        highestScore = score;
-        highestType = type;
-      }
-    });
+    const allScoresAreLow = Object.values(scores).every((score) => score < 7);
+
+    if (allScoresAreLow) {
+      highestType = "healthy";
+    } else {
+      Object.entries(scores).forEach(([type, score]) => {
+        if (score > highestScore) {
+          highestScore = score;
+          highestType = type;
+        }
+      });
+    }
 
     return highestType as
       | "stress"

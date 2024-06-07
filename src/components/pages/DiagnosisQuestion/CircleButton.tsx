@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as CheckIcon } from "../../../icons/check.svg"; // 必要に応じてチェックアイコンをインポート
+import CheckIcon from "@mui/icons-material/Check";
 
 interface CircleButtonProps {
   size: number;

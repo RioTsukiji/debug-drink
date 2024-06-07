@@ -25,7 +25,9 @@ const Menu = () => {
               {menuList.name}
             </span>
             <br />
-            <span style={{ color: "#343c4b", fontWeight: 'normal', opacity: '0.5' }}>
+            <span
+              style={{ color: "#343c4b", fontWeight: "normal", opacity: "0.5" }}
+            >
               {menuList.price}
             </span>
             <span
@@ -40,9 +42,7 @@ const Menu = () => {
             </span>
           </li>
         </ul>
-        <p
-          style={{ paddingLeft: "15px", marginBottom: "15px" }}
-        >
+        <p style={{ paddingLeft: "15px", marginBottom: "15px" }}>
           {menuList.content}
         </p>
       </>
@@ -101,10 +101,26 @@ const ResultDetail = () => {
         <h1 style={{ color: "white", marginBottom: "5px" }}>
           {ResultInfo.drink}
         </h1>
-        <p style={{ color: "white", fontSize: "18px", fontWeight: "bold", paddingBottom: '5px' }}>
+        <p
+          style={{
+            color: "white",
+            fontSize: "18px",
+            fontWeight: "bold",
+            paddingBottom: "5px",
+          }}
+        >
           {ResultInfo.drinkMessage}
         </p>
-        <p style={{ color: 'white', fontSize: '10px', opacity: '0.8', textAlign: 'right' }}>※写真はイメージです。</p>
+        <p
+          style={{
+            color: "white",
+            fontSize: "10px",
+            opacity: "0.8",
+            textAlign: "right",
+          }}
+        >
+          ※写真はイメージです。
+        </p>
       </div>
       <div
         style={{ backgroundColor: "#f9f9f9", padding: "20px 20px 100px 20px" }}
@@ -115,7 +131,14 @@ const ResultDetail = () => {
         </div>
         <div style={{ marginBottom: "40px" }}>
           <h2 style={{ marginBottom: "10px" }}>期待される効果</h2>
-          <p style={{ fontSize: "18px" }}>{ResultInfo.drinkExplain2}<span style={{opacity:"0.4",fontSize:"15px",paddingLeft:"5px"}}>( ChatGPT, 2024 )</span> </p>
+          <p style={{ fontSize: "18px" }}>
+            {ResultInfo.drinkExplain2}
+            <span
+              style={{ opacity: "0.4", fontSize: "15px", paddingLeft: "5px" }}
+            >
+              ( ChatGPT, 2024 )
+            </span>{" "}
+          </p>
         </div>
         <Menu />
       </div>
