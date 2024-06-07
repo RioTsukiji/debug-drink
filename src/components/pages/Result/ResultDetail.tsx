@@ -115,7 +115,7 @@ const ResultDetail = () => {
         </div>
         <div style={{ marginBottom: "40px" }}>
           <h2 style={{ marginBottom: "10px" }}>期待される効果</h2>
-          <p style={{ fontSize: "18px" }}>{ResultInfo.drinkExplain2}</p>
+          <p style={{ fontSize: "18px" }}>{ResultInfo.drinkExplain2}<span style={{opacity:"0.4",fontSize:"15px",paddingLeft:"5px"}}>( ChatGPT, 2024 )</span> </p>
         </div>
         <Menu />
       </div>
