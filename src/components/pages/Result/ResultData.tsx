@@ -1,4 +1,9 @@
 import orange from "../../../icons/materials/f_f_health_53_svg_f_health_53_1nbg.svg";
+import sparcling from '../../../icons/resultIcon/sparklingorange.svg';
+import ItalianJucie from '../../../icons/resultIcon/italianjucie.svg';
+import cocoa from '../../../icons/resultIcon/chococoa.svg';
+import myanma from '../../../icons/resultIcon/myanma.svg';
+import umeboshi from '../../../icons/resultIcon/umeboshi.svg';
 
 interface ResultDataType {
   bugName: string;
@@ -58,7 +63,7 @@ export const resultData: ResultData = {
     alphabet: "GOKUROU-SAN",
     message:
       "学業でしょうか？お仕事でしょうか？あなたはとっても頑張り屋さんで、少し心の緊張が続いているようです。",
-    img: orange,
+    img: myanma,
     color: "#88619A",
     drink: "ミャンマーラペイエ",
     drinkMessage: "シナモンの香りで、神経を柔らか〜くほぐしましょう。",
@@ -71,7 +76,7 @@ export const resultData: ResultData = {
     alphabet: "OTSUKARE-SAN",
     message:
       "あなたは忙しい毎日を送っており、肉体が疲労しているようです。そんななかしっかりお祭りに参加するあなたは最高です。",
-    img: orange,
+    img: umeboshi,
     color: "#33A474",
     drink: "梅干しティーサワー",
     drinkMessage: "疲労によく効く必殺技は、強い酸味以外にありません。",
@@ -83,7 +88,7 @@ export const resultData: ResultData = {
     alphabet: "GENKI-DASHITE",
     message:
       "あなたは最近よくないことがあったのか、活力が不足しているかもしれません。幸せを感じる機会が減っているようです。",
-    img: orange,
+    img: cocoa,
     color: "#4298b4",
     drink: "チョコミルクティー",
     drinkMessage: "ココアの甘さがあなたの鬱屈をデバッグしてくれます。",
@@ -95,7 +100,7 @@ export const resultData: ResultData = {
     alphabet: "SAKENOMI-SAN",
     message:
       "あなたは自分の欲求に忠実で、充実した毎日を送っているようです。幸せそのものですが、身体が完全に酒と夜遊びに浸かりきっています。",
-    img: orange,
+    img: ItalianJucie,
     color: "#E4AE3A",
     drink: "イタリアンジューシー",
     drinkMessage:
@@ -108,7 +113,7 @@ export const resultData: ResultData = {
     alphabet: "PERFECT-BODY",
     message:
       "完璧で最強な身体をお持ちのようです。毎日楽しく、規則正しく、元気でストレスフリーで立派に生きています。素晴らしい！！！！",
-    img: orange,
+    img: sparcling,
     color: "#cc3e60",
     drink: "スパークリングオレンジティー",
     drinkMessage: "完璧な身体には、完璧なドリンクがよくお似合いですよ。",
