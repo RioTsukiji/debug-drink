@@ -9,15 +9,15 @@ const DiagnosisQuestionIndex = () => {
   const questions = [
     {
       type: "stress",
-      question: "朝起きるのが辛い。",
+      question: "最近寝つきが悪い。",
     },
     {
       type: "stress",
-      question: "仕事が終わるとすぐに寝てしまう。",
+      question: "心配事が頭から離れない。",
     },
     {
       type: "playful",
-      question: "ついつい夜更かししてしまう。",
+      question: "つい時間を忘れて遊び、朝まで起きてしまうことがある。",
     },
     {
       type: "playful",

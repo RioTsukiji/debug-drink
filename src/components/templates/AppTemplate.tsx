@@ -26,8 +26,7 @@ const AppTemplate: React.FC<Props> = ({ children }) => {
             src={LOGO}
             style={{
               width: "30px",
-              height: "30px",
-              filter: "grayscale(100%)",
+              height: "30px"
             }}
             alt={"LOGO"}
           />
