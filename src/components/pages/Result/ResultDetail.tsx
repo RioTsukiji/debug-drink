@@ -25,7 +25,7 @@ const Menu = () => {
               {menuList.name}
             </span>
             <br />
-            <span style={{ color: "#343c4b", opacity: "0.35" }}>
+            <span style={{ color: "#343c4b", fontWeight: 'normal', opacity: '0.5' }}>
               {menuList.price}
             </span>
             <span
@@ -41,7 +41,7 @@ const Menu = () => {
           </li>
         </ul>
         <p
-          style={{ paddingLeft: "15px", marginBottom: "15px", opacity: "0.6" }}
+          style={{ paddingLeft: "15px", marginBottom: "15px" }}
         >
           {menuList.content}
         </p>
@@ -101,9 +101,10 @@ const ResultDetail = () => {
         <h1 style={{ color: "white", marginBottom: "5px" }}>
           {ResultInfo.drink}
         </h1>
-        <p style={{ color: "white", fontSize: "18px", fontWeight: "bold" }}>
+        <p style={{ color: "white", fontSize: "18px", fontWeight: "bold", paddingBottom: '5px' }}>
           {ResultInfo.drinkMessage}
         </p>
+        <p style={{ color: 'white', fontSize: '10px', opacity: '0.8', textAlign: 'right' }}>※写真はイメージです。</p>
       </div>
       <div
         style={{ backgroundColor: "#f9f9f9", padding: "20px 20px 100px 20px" }}
